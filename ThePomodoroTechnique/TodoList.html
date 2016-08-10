@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>The Pomodoro Technique</title>
+    <link href="Styles/Layout01.css" rel="stylesheet" type="text/css" />
+
+    <script src="scripts/todos.js"></script>
+    <script src="scripts/Chronometer.js"></script>  
+</head>
+<body onload="initElement()";>
+
+    
+    <input id="task" placeholder="Type a task!"><button onclick="addTask()" class="allbutton" id="addbutton">Add Task</button>
+    <button onclick="showTask()" class="allbutton" id="loadbutton">Load Tasks</button>
+    <hr />
+    <div id="alltasks"></div>
+
+    <div id="changename"></div>
+
+    <div>
+        <button class="pomodorobutton" id="startbutton">Start Task</button>
+        <button class="allbutton" id="editbutton">Edit Task</button>
+        <button class="allbutton" id="completedbutton">Completed</button>        
+    </div>
+    <div calss="filter">
+        <input class="toggleFilter" type="checkbox" id="tgAll" onChange="filter(id)" /><label>All</label>
+        <input class="toggleFilter" type="checkbox" id="tgComplete" onChange="filter(id)" /><label>Completed</label>
+        <input class="toggleFilter" type="checkbox" id="tgIncomplete" onChange="filter(id)" /><label>Incompleted</label>
+    </div>
+
+    
+    <div id="chronotime"></div>    
+
+    <audio id="beep">
+        <source src="Sounds/Ring06.wav"  />
+    </audio>
+
+</body>
+</html>
